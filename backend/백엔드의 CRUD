@@ -1,0 +1,15 @@
+백엔드의 CRUD 
+
+데이터를 처리하는 네 가지 기본 작업
+Create: 새로운 데이터 생성 추가
+Read: 데이터 조회 및 검색
+Update: 기존 데이터 변경 또는 갱신
+Delete: 데이터 삭제
+
+Rest API?
+: Representational State Transfer
+
+1. Stateless (무상태성)
+2. Cacheable (캐시 가능성)
+3. Clinet-Server (클라이언트-서버 구조)
+4. Layered System (계층화된 시스템)

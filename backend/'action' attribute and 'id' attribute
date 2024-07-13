@@ -1,0 +1,25 @@
+
+Problem: whenever I submitted smth in the input box, console showed me this sentence. 
+
+INFO:     127.0.0.1:56445 - "GET /memo-form HTTP/1.1" 404 Not Found
+
+Solution: 
+It was solved by changing 'action' into 'id' of html
+incorrect (original) html: <form action="memo-form">
+
+correct html: <form id="memo-form">
+
+
+Clarification on Attributes:
+action Attribute:
+
+This attribute defines the URL where the form data should be sent when the form is submitted.
+Example: <form action="/submit-form">.
+If specified, the browser navigates to this URL on form submission, causing the 404 error if the endpoint does not exist.
+
+
+Id Attribute:
+
+This attribute provides a unique identifier for the form, which can be used in JavaScript to select and manipulate the form.
+Example: <form id="memo-form">.
+It does not cause the browser to navigate to any URL; it is purely for identification purposes in JavaScript and CSS.
