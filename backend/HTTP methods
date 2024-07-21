@@ -1,0 +1,20 @@
+'POST' method
+- Purpose: The POST method is used to create a new resource on the server.
+- Idempotency: POST is not idempotent, meaning multiple identical POST requests will create multiple resources with different identifiers.
+Usage: Typically used when you need to submit data to the server that should result in a new resource being created, such as submitting a form to create a new user or adding a new memo.
+
+In terms of making a memo application..
+- Purpose: To create a new memo.
+- When to Use: When the user submits a form to add a new memo.
+- Behavior: The server generates a new unique identifier for each memo. Multiple POST requests with the same data will create multiple new memos, each with a unique ID.
+
+
+'PUT' method
+- Purpose: The PUT method is used to update an existing resource on the server. It can also be used to create a resource if the client specifies the resource identifier.
+- Idempotency: PUT is idempotent, meaning multiple identical PUT requests will produce the same result as a single request. If you update a resource with the same data multiple times, the resource will remain unchanged after the first update.
+- Usage: Typically used when you need to update an existing resource, such as editing a memo's content.
+
+In terms of making a memo application..
+- Purpose: To update an existing memo.
+- When to Use: When the user wants to edit the content of an existing memo.
+- Behavior: The server updates the memo identified by the provided ID. If the same PUT request is made multiple times, the memo will be updated to the same state each time, ensuring consistency.
