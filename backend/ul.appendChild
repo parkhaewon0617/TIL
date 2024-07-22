@@ -1,0 +1,48 @@
+'li.appendChild'
+
+In the provided code, `ul.appendChild` and `li.appendChild` are methods used to append child elements to a parent element in the Document Object Model (DOM) of a webpage. Here's a detailed explanation of the role they play and how they are used in this code:
+
+### `ul.appendChild`
+
+The method `ul.appendChild(childElement)` is used to append a child element to the end of the list of children of a specified parent element.
+
+#### Role in the Code
+
+- **Purpose**: It is used to add a new `<li>` element (representing a memo) to the `<ul>` element (the unordered list that holds all memo items).
+
+- **Context in Code**:
+  ```javascript
+  ul.appendChild(li);
+  ```
+  - `ul` is a reference to the `<ul>` element with the id `memo-ul` that contains the list of memos.
+  - `li` is the newly created `<li>` element that represents a single memo item, which includes the memo content, an edit button, and a delete button.
+
+By calling `ul.appendChild(li)`, the code adds the new memo item to the list, ensuring it is displayed on the webpage.
+
+### `li.appendChild`
+
+The method `li.appendChild(childElement)` is used to append a child element to the end of the list of children of a specified parent element.
+
+#### Role in the Code
+
+- **Purpose**: It is used to add child elements (such as buttons) to the newly created `<li>` element that represents a memo.
+
+- **Context in Code**:
+  ```javascript
+  li.appendChild(editBtn);
+  li.appendChild(delBtn);
+  ```
+  - `li` is the `<li>` element representing a single memo item.
+  - `editBtn` is the button element for editing the memo.
+  - `delBtn` is the button element for deleting the memo.
+
+By calling `li.appendChild(editBtn)` and `li.appendChild(delBtn)`, the code adds the edit and delete buttons to the memo item, making them functional and visible to the user.
+
+### Summary of Concepts and Their Roles
+
+- **`ul` (Unordered List)**: A HTML element that holds a collection of `<li>` elements. In this code, it serves as the container for all memo items.
+- **`li` (List Item)**: A HTML element that represents an individual item within a list. In this code, it represents a single memo item, containing the memo content and buttons for editing and deleting.
+- **`ul.appendChild(li)`**: Adds the newly created memo item to the list of memos displayed on the webpage.
+- **`li.appendChild(editBtn)` and `li.appendChild(delBtn)`**: Add the edit and delete buttons to the memo item, enabling the user to interact with each memo.
+
+These methods are crucial for dynamically updating the DOM, allowing the memo list to be created, displayed, and manipulated based on user actions and interactions.
